@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>layout 后台大布局 - Layui</title>
+  <title>硬件设备</title>
 
   <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
   <link rel="stylesheet" href="../css/layui.css">
   <style type="text/css">
-  	*{
-  		margin:0;
-  		padding: 0;
-  	}
+  				body{
+				margin: 10px;
+				overflow: auto!important;
+			}
   </style>
 </head>
 <body class="layui-layout-body">
@@ -23,12 +23,13 @@
 		  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
 		  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 		  <a class="layui-btn layui-btn-xs" lay-event="stop">停止</a>
-
-		  
 		</script>
-  
+  <script type="text/html"id="Addbtn">
+  	<button class="layui-btn layui-btn-normal" lay-event="addContant">创建实例</button>
+  </script>
 
 </div>
+
 <script src="../js/jquery.min.js"></script>
 <script src="../layui.js"></script>
 <script>
@@ -46,14 +47,15 @@ layui.use(['element','table'], function(){
     ,url: '../data.json' //数据接口
     ,title: '用户表'
     ,page: true //开启分页
-    ,toolbar: 'true ' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+    ,toolbar: '#Addbtn ' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
     ,totalRow: false//开启合计行
-    ,type:'checkbox'
+    ,type:'true'
     ,limit:10
+    ,loading:true
     ,where: {limit: 10, page: 2}
     ,cols: [[ //表头
-      {type: 'checkbox', fixed: 'left'}
-      ,{field: 'id', title: 'ID',minWidth:50, width:'', sort: true,fixed: 'left', totalRowText: '合计：'}
+     
+      {field: 'id', title: 'ID',sort: true}
       ,{field: 'username', title: '用户名', width:'',event:"ees"}
       ,{field: 'experience', title: '积分', width: '', sort: true, totalRow: true}
       ,{field: 'sex', title: '性别', width:'', sort: true}
@@ -90,9 +92,18 @@ layui.use(['element','table'], function(){
           layer.msg('删除');
         }
       break;
+      case 'addContant':
+    var ind= layer.open({
+  type: 2,
+  area: ['700px', '450px'],
+  fixed: false, //不固定
+  maxmin: true,
+  content: '../component/addVM.html'
+});
+      break;
     };
   });
-  
+
   //监听行工具事件
   table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
     var data = obj.data //获得当前行数据
@@ -110,12 +121,18 @@ layui.use(['element','table'], function(){
     } else if(layEvent==='ees'){
     
     	 layer.msg('obj');
-    }
+    }else if(layEvent==='addContant'){
+    
+    	 layer.msg('obj');
+    	}
   });
   
 });
 
-
+   function setRel(rel){
+            this.rel=rel;
+            layer.alert(rel)
+        }
 </script>
 </body>
 </html>

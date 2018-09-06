@@ -7,6 +7,24 @@
 		<title>数据盒子</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" href="css/layui.css">
+		<style>
+			.demo-carousel {
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+			}
+			
+			.layadmin-iframe {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				/*top: 0;*/
+				right: 0;
+				/*bottom: 0;*/
+			}
+
+		</style>
 	</head>
 
 	<body class="layui-layout-body">
@@ -84,12 +102,32 @@
 				<div style="padding: 15px;padding-top: 0;">
 
 					<!--<iframe src="" width="100%" height=""></iframe>-->
-					<div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
+					<div class="layui-tab" lay-filter="tabs" lay-allowClose="">
 						<ul class="layui-tab-title">
 							<li class="layui-this">欢迎页</li>
 						</ul>
 						<div class="layui-tab-content">
-							<div class="layui-tab-item layui-show">欢迎您</div>
+							<div class="layui-tab-item layui-show">
+								<div class="layui-carousel" id="test1">
+									<div carousel-item>
+										<div>
+											<p class="layui-bg-green demo-carousel">欢迎你，登陆数据盒子管理平台</p>
+										</div>
+										<div>
+											<p class="layui-bg-red demo-carousel">在这里可以详细看到每个VM的详细信息</p>
+										</div>
+										<div>
+											<p class="layui-bg-blue demo-carousel">如果你是超级玩家，你也可以在这里创建和修改实例</p>
+										</div>
+										<div>
+											<p class="layui-bg-orange demo-carousel">右边菜单栏点击你想查看的信息吧</p>
+										</div>
+										<div>
+											<p class="layui-bg-cyan demo-carousel">好了，开始吧！</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
