@@ -12,11 +12,13 @@
 			body {
 				background: #f2f2f2;
 			}
+			
 			.demo-carousel {
 				height: 100px;
 				line-height: 100px;
 				text-align: center;
 			}
+			
 			.grid-top {
 				height: auto;
 				background: #fff;
@@ -60,7 +62,6 @@
 				color: #676A6C;
 				margin: 10px;
 			}
-			
 		</style>
 	</head>
 
@@ -140,9 +141,9 @@
 				<div class="layui-col-md3">
 					<div class="grid-right">
 						<div class="layui-card">
-          <div class="layui-card-header">数据盒子介绍</div>
-          <div class="layui-card-body">
-           <div class="layui-carousel" id="test1">
+							<div class="layui-card-header">数据盒子介绍</div>
+							<div class="layui-card-body">
+								<div class="layui-carousel" id="test1">
 									<div carousel-item>
 										<div class="demo-carousel">
 											<p class="layui-bg-green">欢迎你，登陆数据盒子管理平台</p>
@@ -161,8 +162,8 @@
 										</div>
 									</div>
 								</div>
-          </div>
-        </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -172,22 +173,10 @@
 		<script src="../layui.js" charset="utf-8"></script>
 		<script src="../js/echarts.js"></script>
 		<script src="../js/echarts_index.js"></script>
+		<script src="../js/index.js"></script>
 		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 		<script>
-			layui.use(['element','carousel'],function(){
-			var	element = layui.element,
-			carousel = layui.carousel
-				//执行一个轮播实例
-	carousel.render({
-		elem: '#test1',
-		width: '100%' //设置容器宽度
-			,
-		height: 100,
-		arrow: 'none' //不显示箭头
-			,
-		anim: 'fade' //切换动画方式
-	});
-			})
+
 		</script>
 	</body>
 
