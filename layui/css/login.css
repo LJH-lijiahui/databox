@@ -1,0 +1,53 @@
+			body{
+				background: #2F4056;
+			}
+			.contentall{
+				
+				width: 100%;
+				height: 100%;
+				/*position: relative;*/
+			}
+			.loginbox{
+				width: 400px;
+				height: 260px;
+				background: #FFF;
+				border-radius: 15px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -200px;
+				margin-top: -130px;
+				overflow: hidden;
+				box-shadow: 3px 3px 3px #333;
+				/*display: none;*/
+			}
+			.heardtext{
+				height: 50px;
+				text-align: center;
+				color: #2F4056;
+				font-size: 16px;
+				width: 100%;
+				line-height: 50px;
+				font-weight: 600;
+				margin-bottom: 20px;
+			}
+			.layui-bottom{
+				bottom: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.lgsurebox{
+				width: 200px;
+				height: 300px;
+				/*background: #FFF;*/
+				border-radius: 15px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -100px;
+				margin-top: -150px;
+				overflow: hidden;
+				
+				/*box-shadow: 3px 3px 3px #333;*/
+				/*display: none;*/
+			}

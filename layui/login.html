@@ -7,9 +7,37 @@
 		<title>数据盒子</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 	</head>
 	<body>
-		
+		<div class="layui-layer-content contentall">
+			<!--<div class="lgsurebox layui-bg-gray">
+				
+			</div>-->
+			<div class="loginbox">
+				<div class="heardtext">浪潮云平台</div>
+				<form action=""class="layui-form"lay-filter="loginform"id="loginform">
+					<div class="layui-form-item">
+						 <label class="layui-form-label">账号</label>
+						    <div class="layui-input-inline">
+						      <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="手机/邮箱用户名" class="layui-input">
+						    </div>
+					</div>
+					<div class="layui-form-item">
+						 <label class="layui-form-label">密码</label>
+						    <div class="layui-input-inline">
+						      <input type="password" name="title" lay-verify="title" autocomplete="off" placeholder="登录密码" class="layui-input"autocomplete="off">
+						    </div>
+					</div>
+					<div class="layui-form-item ">
+						<div class="layui-bottom">
+					      <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="loginbtn">立即登录</button>
+					  
+					    </div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 		<script src="js/jquery.min.js"></script>
 		<script src="layui.js"></script>

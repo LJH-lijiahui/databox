@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="../css/layui.css" media="all">
+		<style>
+			body {
+				background: #f2f2f2;
+			}
+			.demo-carousel {
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+			}
+			.grid-top {
+				height: auto;
+				background: #fff;
+			}
+			
+			.grid-left,
+			.grid-right {
+				height: 500px;
+				background: #fff;
+			}
+			
+			.grid-box {
+				margin-top: 10px
+			}
+			
+			.grid-trip {
+				text-align: center;
+				border: solid #e7eaec 1px;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.grid-text {
+				font-size: 18px;
+				color: #676a6c;
+				padding: 10px;
+				line-height: 30px;
+			}
+			
+			.grid-main {
+				margin: 10px 0;
+			}
+			
+			.grid-main>em {
+				font-size: 24px;
+				color: #009688;
+			}
+			
+			.grid-main>p {
+				font-size: 14px;
+				color: #676A6C;
+				margin: 10px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<!--<!--让IE8/9支持媒体查询，从而兼容栅格-->
+		<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]         -->
+
+		<div class="layui-fluid grid-box">
+
+			<div class="layui-row">
+				<div class="layui-col-md12 ">
+					<section class="grid-top">
+						<div class="layui-row" style="height: 100%;">
+							<div class="layui-col-md3">
+								<div class="grid-trip">
+									<hgroup class="grid-text">
+										虚拟机数量
+										<span class="layui-badge layui-bg-blue">VMs</span>
+									</hgroup>
+									<div class="grid-main">
+										<em>62</em>
+										<p>All VMs</p>
+									</div>
+								</div>
+							</div>
+							<div class="layui-col-md3">
+								<div class="grid-trip">
+									<hgroup class="grid-text">
+										主机总数
+										<span class="layui-badge layui-bg-cyan">Hosts</span>
+									</hgroup>
+									<div class="grid-main">
+										<em>30</em>
+										<p>All hosts</p>
+									</div>
+								</div>
+							</div>
+							<div class="layui-col-md3">
+								<div class="grid-trip">
+									<hgroup class="grid-text">
+										运行数量
+										<span class="layui-badge layui-bg-orange">Actions</span>
+									</hgroup>
+									<div class="grid-main">
+										<em>19</em>
+										<p>All acts</p>
+									</div>
+								</div>
+							</div>
+							<div class="layui-col-md3">
+								<div class="grid-trip">
+									<hgroup class="grid-text">
+										用户数量
+										<span class="layui-badge layui-bg-green">Users</span>
+									</hgroup>
+									<div class="grid-main">
+										<em>27</em>
+										<p>All users</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<section class="layui-row layui-col-space30">
+				<div class="layui-col-md9 ">
+					<div class="grid-left">
+						<div class="grid-echart">
+							<div id="main" style="width: 600px;height:400px;margin: 0 auto;padding-top: 20px;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="grid-right">
+						<div class="layui-card">
+          <div class="layui-card-header">数据盒子介绍</div>
+          <div class="layui-card-body">
+           <div class="layui-carousel" id="test1">
+									<div carousel-item>
+										<div class="demo-carousel">
+											<p class="layui-bg-green">欢迎你，登陆数据盒子管理平台</p>
+										</div>
+										<div class="demo-carousel">
+											<p class="layui-bg-red">在这里可以详细看到每个VM的详细信息</p>
+										</div>
+										<div class="demo-carousel">
+											<p class="layui-bg-blue">你也可以在这里创建和修改实例</p>
+										</div>
+										<div class="demo-carousel">
+											<p class="layui-bg-orange">右边菜单栏点击你想查看的信息吧</p>
+										</div>
+										<div class="demo-carousel">
+											<p class="layui-bg-cyan">好了，开始吧！</p>
+										</div>
+									</div>
+								</div>
+          </div>
+        </div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<script src="../layui.js" charset="utf-8"></script>
+		<script src="../js/echarts.js"></script>
+		<script src="../js/echarts_index.js"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use(['element','carousel'],function(){
+			var	element = layui.element,
+			carousel = layui.carousel
+				//执行一个轮播实例
+	carousel.render({
+		elem: '#test1',
+		width: '100%' //设置容器宽度
+			,
+		height: 100,
+		arrow: 'none' //不显示箭头
+			,
+		anim: 'fade' //切换动画方式
+	});
+			})
+		</script>
+	</body>
+
+</html>

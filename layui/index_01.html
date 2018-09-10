@@ -33,6 +33,9 @@
 				text-align: center;
 				display: block;
 			}
+			.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-this>a:hover{
+				background-color: #737383;
+			}
 		</style>
 	</head>
 
@@ -79,33 +82,57 @@
 				<div class="layui-side-scroll">
 					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
 					<ul class="layui-nav layui-nav-tree" lay-filter="test">
-						<li class="layui-nav-item layui-nav-itemed ">
-							<a href="javascript:;" data-id="1" data-title="硬件设备" data-url="component/index_02.html">硬件设备</a>
+						<li class="layui-nav-item layui-this ">
+
+							<a href="javascript:;"data-url="component/index_01.html"data-id="4" data-title="首页">
+							<span class="layui-icon layui-icon-home"></span>
+								首页</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" >
+								<span class="layui-icon layui-icon-layouts"></span>
+								硬件设备</a>
+							<dl class="layui-nav-child">
+					            <dd><a href="javascript:;"data-url="component/index_02.html"data-id="1" data-title="设备管理" >
+								<span class="layui-icon layui-icon-templeate-1"></span>
+					            	设备管理</a></dd>
+					            <dd><a href="javascript:;"data-url="component/index_02.html"data-id="2" data-title="磁盘管理">
+								<span class="layui-icon layui-icon-tabs"></span>
+					            	磁盘管理</a></dd>
+					            
+					        </dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" data-id="3" data-title="虚拟机列表" data-url="index.html">
+								<span class="layui-icon layui-icon-component"></span>
+								虚拟机列表</a>
 							<!--<dl class="layui-nav-child">
             <dd><a href="javascript:;">列表一</a></dd>
             <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">列表三</a></dd>
             <dd><a href="">超链接</a></dd>
           </dl>-->
 						</li>
 						<li class="layui-nav-item">
-							<a href="javascript:;" data-id="2" data-title="解决方案" data-url="index.html">解决方案</a>
-							<!--<dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="">超链接</a></dd>
-          </dl>-->
+							<a href="#">
+								<span class="layui-icon layui-icon-user"></span>
+								用户管理</a>
 						</li>
 						<li class="layui-nav-item">
-							<a href="#">云市场</a>
+							<a href="#">
+								<span class="layui-icon layui-icon-app"></span>
+								产品实验室</a>
 						</li>
 						<li class="layui-nav-item">
-							<a href="#">发布商品</a>
+							<a href="#">
+								<span class="layui-icon layui-icon-form"></span>
+								日志记录</a>
 						</li>
 					</ul>
 					
 				</div>
-				<p class="nav-bottom">浪潮云平台</p>
+				<p class="nav-bottom">浪潮云平台 </br>
+					© 2016 inspur.com 版权所有<br/> ICP证：鲁A2-20080101
+				</p>
 			</div>
 
 			<div class="layui-body">
@@ -115,10 +142,10 @@
 					<!--<iframe src="" width="100%" height=""></iframe>-->
 					<div class="layui-tab" lay-filter="tabs" lay-allowClose="">
 						<ul class="layui-tab-title">
-							<li class="layui-this">欢迎页</li>
+							<!--<li class="layui-this">欢迎页</li>-->
 						</ul>
 						<div class="layui-tab-content">
-							<div class="layui-tab-item layui-show">
+							<!--<div class="layui-tab-item layui-show">
 								<div class="layui-carousel" id="test1">
 									<div carousel-item>
 										<div>
@@ -138,7 +165,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 						</div>
 					</div>
 
@@ -148,6 +175,7 @@
 			<div class="layui-footer">
 				<!-- 底部固定区域 -->
 				数据盒子
+				© 2016 inspur.com 版权所有 ICP证：鲁A2-20080101
 			</div>
 		</div>
 		<script src="js/jquery.min.js"></script>
