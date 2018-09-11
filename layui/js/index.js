@@ -17,9 +17,9 @@ layui.use(['element', 'table', 'carousel'], function() {
 	element.tabAdd('tabs', {
 		title: "首页",
 		content: '<iframe scrolling="auto" frameborder="0"  src="component/index_01.html' + '?v=' + new Date().getTime() + '" class="layadmin-iframe"></iframe>',
-		id: 4
+		id: 1
 	});
-	element.tabChange('tabs', 4); //根据传入的id传入到指定的tab项
+	element.tabChange('tabs', 1); //根据传入的id传入到指定的tab项
 	//				layer.open({
 	//				  type: 0, 
 	//				   content: 'demo.html',
