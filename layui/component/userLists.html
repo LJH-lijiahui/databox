@@ -55,10 +55,12 @@
     //obj包含了当前分页的所有参数，比如：
     console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
     console.log(obj.limit); //得到每页显示的条数
+    	mkobj(obj.curr,obj.limit)
     
     //首次不执行
     if(!first){
     	console.log(obj)
+    	mkobj(obj.curr,obj.limit)
       //do something
     }
   }
@@ -66,7 +68,7 @@
 });
 	var userboot=1;
 	var lenght=10;
-	var lihtml="";
+	
 	var name="乐芙兰";
 	var nowtime=new Date();
 	var id=Math.random()*100;
@@ -75,16 +77,20 @@
 		  '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>'+
 		  '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>'+
 		  '<a class="layui-btn layui-btn-xs" lay-event="stop">停止</a>';
-	for(var i=0;i<=lenght;i++){
+	function mkobj(page,limit){
+		var lihtml="";
+		for(var i=0;i<=lenght;i++){
 		lihtml+='<tr>'+
 		'<td>'+Math.floor(Math.random()*100)+'</td>'+
-		'<td>'+name+'</td>'+
+		'<td>'+name+page+'</td>'+
 		'<td>'+nowtime+'</td>'+
-		'<td>'+text+'</td>'+
+		'<td>'+text+limit+'</td>'+
 //		'<td>'+btnhtml+'</td>'+
 		'</tr>';
-	}   
+	} 
 	$('.tablebox').html(lihtml);
+	}
+
 </script>
 </body>
 </html>
